@@ -1,0 +1,19 @@
+<div class="main">
+    <hr class="thick">
+    <div class="desktop">
+        <div class="desktop-links">
+            <app-linkbox *ngFor="let link of data.links" [link]="link">
+            </app-linkbox>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="mobile-links">
+            <app-linkbox *ngFor="let link of data.links" [link]="link">
+            </app-linkbox>
+        </div>
+    </div>
+    <div>
+        {{data.text}}
+    </div>
+    <br>
+</div>

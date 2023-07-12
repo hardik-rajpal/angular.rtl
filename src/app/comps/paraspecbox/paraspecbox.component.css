@@ -1,0 +1,36 @@
+
+.col{
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    align-items: center;
+}
+.rrow{
+    align-items: center;
+}
+.desktop.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.article-img-desktop{
+    padding: 10px;
+    width: 400px;
+    max-width: 50%;
+}
+.article-img-mobile{
+    padding: 10px;
+    /* width: 400px; */
+    max-width: 90%;
+}
+
+
+.desktop.standalone-img{
+    max-width: 50%;
+}
+.mobile.standalone-img{
+    /* width: 400px; */
+    max-width: 90%;
+}

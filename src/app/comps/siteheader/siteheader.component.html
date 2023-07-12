@@ -1,0 +1,31 @@
+<div class="desktop">
+    <div class="col">
+        <a href="">
+            <div class="row">
+                <img src="{{data.logo}}" class="logo">
+                <div class="row">
+                    <div class="isititle desktop fs-xx-large">{{data.title}}</div>
+                    <div class="eputitle fs-x-large" *ngIf="data.subtitle">{{data.subtitle}}</div>
+        </div>
+    </div>
+    </a>
+    <app-navbar class="navbar"></app-navbar>
+    <hr class="thick">
+    </div>
+</div>
+<div class="mobile">
+    <div class="col">
+        <a href="">
+        <div class="row">
+            <img src="{{data.logo}}" class="logo">
+            <div class="row">
+                <div class="isititle fs-xx-large">{{data.title}}</div>
+            </div>
+        </div>
+        <hr class="mobile">
+        <div class="eputitle mobile fs-x-large" *ngIf="data.subtitle">{{data.subtitle}}</div>
+        </a>
+        <app-navbar class="navbar"></app-navbar>
+        <hr class="thick">
+    </div>
+</div>

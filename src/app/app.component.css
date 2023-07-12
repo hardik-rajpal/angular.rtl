@@ -1,0 +1,23 @@
+/* .main{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin:auto;
+    width: 80%;
+    min-height: 100%;
+} */
+.main{
+    position: relative;
+    height: auto !important;
+    min-height: 100%;
+    margin: auto;
+    width: 80%;
+}
+.content{
+    padding-bottom: 100px;
+}
+app-sitefooter{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+}

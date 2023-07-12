@@ -1,0 +1,55 @@
+<div class="largewidth">
+    <div class="largewidth-navbar navbar">
+        <div class="dropdown" *ngFor="let route of routes" (mouseover)="setactiveDesktop(route)">
+            <div class="dropbtn">
+                <a *ngIf="(route.children===undefined&&route.route!.startsWith('https'))" href="{{route.route!}}">{{route.label}}</a>
+                <a *ngIf="(route.children===undefined&&(!route.route || !route.route!.startsWith('https')))" [routerLink]="[route.route]">
+                    {{route.label}}
+                </a>
+                <a *ngIf="(route.children!==undefined)">
+                    {{route.label}}
+                </a>
+            </div>
+            <div *ngIf="routes[activeRouteIndex]===route&&route.children" class="dropdown-content largewidth">
+                <div *ngFor="let childRoute of route.children" class="childRoute">
+                    <a *ngIf="!childRoute.route?.startsWith('http')" [routerLink]="[childRoute.route]" (click)="clearActive()">
+                        {{childRoute.label}}
+                    </a>
+                    <a *ngIf="childRoute.route?.startsWith('http')" href="{{childRoute.route}}">
+                        {{childRoute.label}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="smallwidth">
+    <div class="smallwidth-navbar navbar">
+        <div class="dropdown" *ngFor="let route of routes">
+            <div class="dropbtn">
+                <!-- <div> -->
+                    <a *ngIf="(route.children===undefined&&route.route!.startsWith('https'))" href="{{route.route!}}">{{route.label}}</a>
+                    <a *ngIf="(route.children===undefined&&(!route.route || !route.route!.startsWith('https')))" [routerLink]="[route.route]">
+                        {{route.label}}
+                    </a>
+                <!-- </div> -->
+                <div class="routeWithChildren" *ngIf="(route.children!==undefined)" (click)="setactive(route)">
+                    <a>
+                        {{route.label}}
+                    </a>
+                    <i style="color:grey" class="fa fa-sort-down"></i>
+                </div>
+            </div>
+            <div *ngIf="routes[activeRouteIndex]===route&&route.children" class="dropdown-content smallwidth">
+                <div *ngFor="let childRoute of route.children" class="childRoute">
+                    <a *ngIf="!childRoute.route?.startsWith('http')" [routerLink]="[childRoute.route]" (click)="clearActive()">
+                        {{childRoute.label}}
+                    </a>
+                    <a *ngIf="childRoute.route?.startsWith('http')" href="{{childRoute.route}}">
+                        {{childRoute.label}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+.col{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.row{
+    align-items: center;
+}
+.isititle{
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.isititle.desktop{
+    border-right: 2px solid var(--secondary);
+}
+
+.eputitle.mobile{
+    text-align: center;
+}
+hr
+{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:var(--secondary);
+    height: 5px;
+}
+hr.mobile{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:var(--secondary);
+    height: 2px;
+}
+.navbar{
+    padding-top: 10px;
+}
+
+a,a:hover{
+    text-decoration: none;
+    color: black;
+}

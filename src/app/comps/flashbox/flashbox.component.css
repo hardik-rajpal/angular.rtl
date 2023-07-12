@@ -1,0 +1,20 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.flash-title{
+    padding: 5px;
+    margin-top: 10px;
+    color: white;
+    background-color: var(--primary);
+    z-index: 1;
+}
+.body{
+    margin-left: 10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid var(--primary);
+    overflow: auto;
+}

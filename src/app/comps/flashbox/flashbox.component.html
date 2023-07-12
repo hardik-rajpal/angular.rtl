@@ -1,0 +1,9 @@
+<div class="main" [ngStyle]="{width:(width?width:'')}">
+    <div class="flash-title fs-larger" [innerHTML]="title"></div>
+    <div class="body fs-medium" *ngIf="paras">
+        <app-paraspecbox *ngFor="let para of paras" [para]="para"></app-paraspecbox>
+    </div>
+    <div class="body fs-medium" *ngIf="!paras">
+        <ng-content></ng-content>
+    </div>
+</div>

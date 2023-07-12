@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="icon" *ngIf="iconCode.length>0" [innerHTML]="iconCode"></div>
+    <a *ngIf="!isRouterLink" [href]="link.target" target="_blank">
+        {{link.label}}
+    </a>
+    <a *ngIf="isRouterLink" [routerLink]="[link.target]">
+        {{link.label}}
+    </a>
+</div>

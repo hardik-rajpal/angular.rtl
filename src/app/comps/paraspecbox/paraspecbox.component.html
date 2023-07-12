@@ -1,0 +1,49 @@
+<div class="main">
+    <div *ngIf="para!.text">
+        <p  *ngIf="!(para!.image)" [innerHTML]="para!.text|safe:'html'"></p>
+        <div *ngIf="para!.image">
+            <div class="desktop">
+                <div [class]="para!.reverse?'rrow':'row'">
+                    <img class="article-img-desktop" *ngIf="para!.image" src="{{para!.image}}"/>
+                    <p [innerHTML]="para!.text|safe:'html'"></p>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="col">
+                    <img class="article-img-mobile" *ngIf="para!.image" src="{{para!.image}}"/>
+                    <p [innerHTML]="para!.text|safe:'html'"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="para!.list">
+        <div *ngIf="para!.image">
+            <div class="desktop">
+                <div [class]="para!.reverse?'rrow':'row'">
+                    <img class="article-img-desktop" *ngIf="para!.image" src="{{para!.image}}"/>
+                    <ul>
+                        <li *ngFor="let item of para!.list" [innerHTML]="item"></li>
+                    </ul>            
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="col">
+                    <img class="article-img-mobile" *ngIf="para!.image" src="{{para!.image}}"/>
+                    <ul>
+                        <li *ngFor="let item of para!.list" [innerHTML]="item"></li>
+                    </ul>            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!para!.text && (!para!.list)" class="col">
+        <div class="desktop col">
+            <img class="desktop standalone-img" *ngIf="para!.image" src="{{para!.image}}"/>
+        </div>
+        <div class="mobile col">
+            <img class="mobile standalone-img" *ngIf="para!.image" src="{{para!.image}}"/>
+
+        </div>
+    </div>
+    <a *ngIf="para!.internalLink" class="button" [routerLink]="[(para!.internalLink.route!.startsWith('misc')?'/':'')+para!.internalLink.route]" [innerHTML]="para!.internalLink.label"></a>
+</div>

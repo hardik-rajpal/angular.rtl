@@ -1,0 +1,9 @@
+<div class="main">
+    <div *ngIf="group.title===undefined">
+        <app-paraspecbox  *ngFor="let para of group.paragraphs" [para]="para"></app-paraspecbox>
+    </div>
+    <div *ngIf="group.paragraphs.length===0">
+        <p class="title" [innerHTML]="group.title"></p>
+    </div>
+    <app-flashbox *ngIf="group.title&&group.paragraphs.length>0" [title]="group.title" [paras]="group.paragraphs"></app-flashbox>
+</div>
