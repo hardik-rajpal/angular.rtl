@@ -13,6 +13,8 @@ import { SiteheaderComponent } from './comps/siteheader/siteheader.component';
 import { LinkboxComponent } from './comps/linkbox/linkbox.component';
 import { NavbarComponent } from './comps/navbar/navbar.component';
 import { SafePipe } from './safe.pipe';
+import { VersatilePageComponent } from './comps/versatile-page/versatile-page.component';
+import { HomePageComponent } from './comps/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { SafePipe } from './safe.pipe';
     SiteheaderComponent,
     LinkboxComponent,
     NavbarComponent,
-    SafePipe
+    SafePipe,
+    VersatilePageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
